@@ -79,9 +79,13 @@ analysis to whatever answer looks best afterward.)*
 ## Target roles & resume story
 - **Target roles:** open — Data Analyst, Risk Analyst, or Quant/Research Analyst roles that
   value applied statistics for real investment decisions.
-- **Resume story (draft, to finalize with actual results):** "Analyzed 6 cryptocurrencies'
-  historical returns (2021–2026) to test portfolio diversification using correlation regimes
-  and Markowitz optimization, revealing [finding] across two real market crashes."
+- **Resume story (finalized with actual results):** "Analyzed 6 cryptocurrencies' historical
+  returns (2021–2026) to test portfolio diversification using correlation regimes and
+  Markowitz optimization; found that pairwise correlation rises sharply during crashes
+  (0.54 calm vs. 0.77–0.84 during the 2022 and 2026 crashes), and that an in-sample
+  'optimal' Markowitz portfolio underperformed both equal-weighting and single-asset
+  Bitcoin out-of-sample — demonstrating that backward-looking optimization can be
+  overconfident and fragile in a fast-evolving asset class."
 
 ---
 
@@ -94,3 +98,12 @@ analysis to whatever answer looks best afterward.)*
   will be documented when we pull the data.
 - No transaction costs, slippage, or exchange risk are modeled in the portfolio comparisons.
 - This is research for learning and portfolio purposes — **not financial advice**.
+- Crash windows (2022-05-01 to 2022-12-31; 2026-01-01 to 2026-06-30) were manually defined
+  from known real-world events (Terra/Luna collapse, FTX collapse, 2026 war/Fed-driven
+  decline), not statistically detected from the data. This is a defensible, theory-driven
+  choice (it avoids cherry-picking windows after seeing results) but the exact boundary
+  dates involve judgment, not a data-driven changepoint test.
+- Correlation was deliberately computed on log returns, not raw price levels, to avoid
+  spurious correlation from shared long-term trend (raw-level correlation was noticeably
+  higher for several pairs, e.g. BNB-BTC 0.89 vs 0.67 on returns — confirmed empirically
+  during this analysis, not just assumed from theory).
