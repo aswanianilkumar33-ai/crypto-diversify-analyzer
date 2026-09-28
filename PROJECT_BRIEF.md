@@ -82,10 +82,14 @@ analysis to whatever answer looks best afterward.)*
 - **Resume story (finalized with actual results):** "Analyzed 6 cryptocurrencies' historical
   returns (2021–2026) to test portfolio diversification using correlation regimes and
   Markowitz optimization; found that pairwise correlation rises sharply during crashes
-  (0.54 calm vs. 0.77–0.84 during the 2022 and 2026 crashes), and that an in-sample
-  'optimal' Markowitz portfolio underperformed both equal-weighting and single-asset
-  Bitcoin out-of-sample — demonstrating that backward-looking optimization can be
+  (0.54 calm vs. 0.76–0.84 during the 2022 and 2026 crashes; block-bootstrap 95% CIs
+  exclude zero), and that an in-sample 'optimal' Markowitz portfolio lost its edge
+  out-of-sample (Sharpe −0.35 vs −0.34 equal-weighted and −0.13 Bitcoin; difference not
+  statistically significant) — demonstrating that backward-looking optimization can be
   overconfident and fragile in a fast-evolving asset class."
+- **Stretch goal completed:** formal significance testing was done with a moving-block
+  bootstrap (instead of the Fisher z-test first planned, because daily returns are not
+  independent). See `src/significance.py`.
 
 ---
 

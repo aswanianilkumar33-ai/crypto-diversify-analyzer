@@ -1,0 +1,7 @@
+question,comparison,estimate,ci_low,ci_high,p_value_one_sided,method
+RQ1,avg correlation: crash_2022 minus calm,0.22415686691277947,0.09414493810735904,0.3298485213514774,0.0,"moving-block bootstrap (block=20 days, B=2000)"
+RQ1,avg correlation: crash_2026 minus calm,0.29872318782310703,0.16536891397556908,0.3977767885879019,0.0,"moving-block bootstrap (block=20 days, B=2000)"
+RQ2,volatility: equal-weighted minus average single coin,-0.19159472186577475,-0.2565043413760338,-0.12586392839736518,0.0,"moving-block bootstrap (block=20 days, B=2000)"
+RQ2,volatility: equal-weighted minus BTC alone,0.15466306851691103,0.10833270515914847,0.20768476307646708,1.0,"moving-block bootstrap (block=20 days, B=2000)"
+RQ3,OOS Sharpe: optimized minus equal-weighted,-0.011883824342777904,-0.3023419796811116,0.2691591122082993,0.523,"moving-block bootstrap (block=20 days, B=2000)"
+RQ3,OOS Sharpe: optimized minus BTC alone,-0.21632457798901344,-0.9073061457151052,0.4603717796747441,0.7465,"moving-block bootstrap (block=20 days, B=2000)"

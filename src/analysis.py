@@ -122,10 +122,23 @@ def main():
                      for c, w1, w2 in zip(coins, opt_weights_full, opt_weights_train)]
     pd.DataFrame(weights_rows).to_csv(f"{OUT_DIR}/optimal_weights.csv", index=False)
 
+    # --- Extra tables in long format for the Power BI dashboard ---
+    long_corr = overall_corr.reset_index().melt(id_vars="coin", var_name="coin_1", value_name="correlation")
+    long_corr = long_corr.rename(columns={"coin": "coin_2"})[["coin_1", "coin_2", "correlation"]]
+    long_corr.to_csv(f"{OUT_DIR}/correlation_overall_long.csv", index=False)
+
+    conn = sqlite3.connect(DB_PATH)
+    prices = pd.read_sql("SELECT * FROM prices ORDER BY coin, date", conn)
+    conn.close()
+    # Growth of $100: each coin's price divided by its first price, times 100
+    prices["normalized_price"] = prices.groupby("coin")["close_price"].transform(lambda p: p / p.iloc[0] * 100)
+    prices[["date", "coin", "normalized_price"]].to_csv(f"{OUT_DIR}/normalized_prices.csv", index=False)
+
     print("Exported to data/processed/:")
     for f in ["correlation_overall.csv", "correlation_by_period.csv",
               "correlation_avg_by_period.csv", "volatility_comparison.csv",
-              "portfolio_comparison.csv", "optimal_weights.csv"]:
+              "portfolio_comparison.csv", "optimal_weights.csv",
+              "correlation_overall_long.csv", "normalized_prices.csv"]:
         print(f"  {f}")
 
 
