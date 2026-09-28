@@ -103,4 +103,4 @@ Re-downloading pulls prices up to today, so numbers may differ slightly from tho
 
 ---
 
-*Author: Aswani A. MSc Statistics (University of Kerala).*
+*Author: Aswani A*
