@@ -16,7 +16,7 @@ protection is needed most.
 | # | Question | Result | Verdict |
 |---|---|---|---|
 | RQ1 | Are coins more correlated during crashes? | Average pairwise correlation **0.54 in calm periods vs 0.76 (2022 crash) and 0.84 (2026 crash)**. Difference +0.22 (95% CI 0.09 to 0.33) and +0.30 (95% CI 0.17 to 0.40), p < 0.001 | **H0 rejected.** Diversification weakens in crashes. |
-| RQ2 | Does an equal-weighted portfolio lower volatility? | 72.6% annualized vs 91.8% for the average single coin: **−19.2 points (95% CI −25.7 to −12.6)**. But it is **+15.5 points above Bitcoin alone** (95% CI 10.8 to 20.8). | **Partly.** Lower than a typical coin, not lower than BTC. |
+| RQ2 | Does an equal-weighted portfolio lower volatility? | 72.6% annualized vs 91.7% for the average single coin: **−19.2 points (95% CI −25.7 to −12.6)**. But it is **+15.5 points above Bitcoin alone** (95% CI 10.8 to 20.8). | **Partly.** Lower than a typical coin, not lower than BTC. |
 | RQ3 | Does Markowitz optimization beat equal-weighting? | In-sample Sharpe 0.76 vs 0.57 looks better. **Out-of-sample (2025–2026): −0.35 vs −0.34 (EW) and −0.13 (BTC)**. Optimized minus EW = −0.01 (95% CI −0.30 to 0.27). | **H0 not rejected.** No evidence optimization helps. Its in-sample edge vanished. |
 
 **In one sentence:** crypto diversification gives some everyday risk reduction, but

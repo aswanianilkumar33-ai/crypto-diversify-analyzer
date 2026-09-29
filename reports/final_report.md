@@ -87,7 +87,7 @@ correlation rose even though volatility did not.
 
 | | Annualized volatility |
 |---|---|
-| Average single coin | 91.8% |
+| Average single coin | 91.7% |
 | Equal-weighted portfolio | **72.6%** |
 | Bitcoin alone | 57.1% |
 

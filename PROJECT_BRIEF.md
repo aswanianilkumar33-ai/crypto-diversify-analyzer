@@ -68,7 +68,7 @@ analysis to whatever answer looks best afterward.)*
 
 ## Deliverables
 - `data/project.db` — SQLite database
-- `sql/` — her own commented queries
+- `sql/` — commented SQL queries
 - `notebooks/01_eda.ipynb`, `notebooks/02_analysis.ipynb`
 - `dashboard/cryptodiversify.pbix` + screenshots
 - `reports/final_report.md`

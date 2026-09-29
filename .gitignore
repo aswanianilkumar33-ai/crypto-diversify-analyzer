@@ -17,3 +17,11 @@ dashboard/cryptodiversify_backup.pbix
 dashboard/restyle_dashboard.py
 dashboard/screenshots/final*
 dashboard/screenshots/Screenshot*
+
+# Personal learning / tutoring notes (kept locally, not part of the portfolio)
+CLAUDE.md
+CAREER.md
+LEARNING_LOG.md
+PROGRESS.md
+GLOSSARY.md
+practice/
